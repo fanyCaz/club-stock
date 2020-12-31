@@ -1,0 +1,11 @@
+<h2>Lista de Productos</h2>
+
+<ul>
+    <% @products.each do |product| %>
+        <li>
+            <%= link_to product.name, product %>
+        </li>
+    <% end %>
+</ul>
+
+<p><%= link_to "Nuevo", new_product_path %></p>
