@@ -1,0 +1,6 @@
+<h1><%= @product.name %></h1>
+<p>$<%= @product.price %></p>
+<p>Cantidad <%= @product.quantity%> </p>
+
+<p><%= link_to "Editar", edit_product_path(@product) %></p>
+<p><%= link_to "Eliminar", product_path(@product), method: :delete, data: { confirm: "¿estás seguro?" } %></p>
