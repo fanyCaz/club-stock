@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def show
     #The product is a resource, aka an object of the model
-    # @ is a prefix , this is Perl in disguise
+    # @ is a prefix for the variable of this class 'ProductController', this is Perl in disguise
     # in html, with the get path: <a href="<%= product_path(product) %>">
     @product = Product.find(params[:id])
   end
