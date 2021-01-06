@@ -1,4 +1,8 @@
-<h2>Lista de Productos</h2>
+<div class="header-productos">
+    <h2>P R O D U C T O S</h2>
+</div>
+
+<p class="btn-product"><%= link_to "Nuevo", new_product_path %></p>
 
 <ul>
     <% @products.each do |product| %>
@@ -7,5 +11,3 @@
         </li>
     <% end %>
 </ul>
-
-<p><%= link_to "Nuevo", new_product_path %></p>

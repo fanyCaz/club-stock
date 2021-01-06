@@ -3,7 +3,33 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 $font-stack: Helvetica, sans-serif;
+$white : #fff;
+$btn-new-color: #64B883;
 
 body{
     font: 100% $font-stack;
+}
+
+.header-productos{
+    display: grid;
+    grid-template-columns: 1;
+}
+
+.header-productos h2{
+    color: $white;
+    text-align: center;
+}
+
+.btn-product{
+    background-color: $btn-new-color;
+    border-radius: 25px;
+    padding: 1em;
+    width: 10em;
+    text-align: center;
+}
+
+.form-div{
+    height: 25%;
+    margin: 0 0 0 40%;
+    padding: 1em;
 }

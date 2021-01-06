@@ -9,7 +9,7 @@ $product-size: 120px;
 $product-up: 10em;
 $product-left: 10em;
 
-$title-color: #57324a;
+$title-color: #6d3f5c;
 
 * {
     box-sizing: border-box;
@@ -60,7 +60,17 @@ body{
 
 .header{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 80% 20%;
 }
 
-.
+.btn-init{
+    grid-column: 2;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #da7eb9;
+}
+
+.btn-init p{
+    text-align: center;
+    color: $white;
+}
