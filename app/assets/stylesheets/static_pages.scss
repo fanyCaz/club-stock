@@ -1,0 +1,66 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$back-color: #7eb9da;
+$back-height: 100%;
+$white : #fff;
+$product-size: 120px;
+$product-up: 10em;
+$product-left: 10em;
+
+$title-color: #57324a;
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right,$back-color,$white);
+}
+
+.home-background{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.images{
+    background-color: transparent;
+}
+
+.product-1{
+    width : $product-size;
+    height: $product-size;
+    background-color: #da7eb9;
+    transform: rotate(45deg);
+    margin: 5em 0 0 $product-left;
+}
+
+.product-2{
+    width : $product-size;
+    height: $product-size;
+    background-color: #9f7eda;
+    transform: rotate(90deg);
+    margin: 0 0 0 $product-left;
+}
+
+.product-3{
+    width : $product-size;
+    height: $product-size;
+    background-color: #b9da7e;
+    transform: rotate(135deg);
+    margin: 0 0 0 $product-left;
+}
+
+.title{
+    justify-self: center;
+    align-self: center;
+    color: $title-color
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.
