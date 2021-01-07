@@ -60,17 +60,30 @@ body{
 
 .header{
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 20% 40% 20% 20%;
 }
 
 .btn-init{
-    grid-column: 2;
-    height: 50px;
+    height: 3em;
+    margin: 1em;
     border-radius: 25px;
     background-color: #da7eb9;
+    p{
+        text-align: center;
+        color: $white;
+    }
 }
 
-.btn-init p{
+#logo{
+    grid-column: 1;
     text-align: center;
-    color: $white;
+    align-self: center;
+}
+
+.new{
+    grid-column: 3;
+}
+
+.start{
+    grid-column: 4;
 }
