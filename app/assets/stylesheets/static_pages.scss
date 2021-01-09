@@ -16,7 +16,7 @@ $title-color: #6d3f5c;
 }
 
 body{
-    background-image: linear-gradient(to right,$back-color,$white);
+    background-color: $back-color;
 }
 
 .home-background{
@@ -55,7 +55,7 @@ body{
 .title{
     justify-self: center;
     align-self: center;
-    color: $title-color
+    color: $white;
 }
 
 .header{

@@ -1,0 +1,6 @@
+<% if @user %>
+<%= gravatar_for @user %>
+<p><%= @user.name %> - <%= user.username %></p>
+<% else %>
+<p>No existe este usuario</p>
+<% end %>

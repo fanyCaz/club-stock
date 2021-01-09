@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   #GET method , request to /products are handled in the index function of the Products Controller
   resources :products
+  resources :users
   #'resources' gets all the product urls
   #get "/products", to: "products#index"
   #get "/products/:id", to: "products#show"

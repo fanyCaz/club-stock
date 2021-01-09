@@ -2,3 +2,21 @@
 
 <h1>Regístrate</h1>
 <p>Sé un usuario para un mejor manejo de tu Inventario</p>
+
+<%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmación" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+<% end %>
