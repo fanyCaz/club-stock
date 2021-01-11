@@ -1,6 +1,9 @@
 <% if @user %>
-<%= gravatar_for @user %>
-<p><%= @user.name %> - <%= user.username %></p>
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= gravatar_for @user %>
+    <p><%= @user.name %> - <%= @user.username %></p>
 <% else %>
-<p>No existe este usuario</p>
+    <p>No existe este usuario</p>
 <% end %>
