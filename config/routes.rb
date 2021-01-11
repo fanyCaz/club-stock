@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   get 'users/new'
   root "static_pages#home"
   #STATICS
@@ -9,7 +10,11 @@ Rails.application.routes.draw do
   
   #SIGN UP
   get 'signup', to: "users#new"
-
+  #LOG IN
+  get '/login', to: "sessions#new"
+  post '/login', to: "sessions#create"
+  delete '/logout', to: "sessions#destroy"
+  
   #GET method , request to /products are handled in the index function of the Products Controller
   resources :products
   resources :users
