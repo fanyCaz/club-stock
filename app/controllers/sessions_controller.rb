@@ -5,13 +5,17 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
-      redirect_to 'users#new'
+      reset_session
+      log_in user
+      redirect_to user
     else
-      flash[:danger] = "El usuario o contraseña son incorrectos"
+      flash.now[:danger] = "El usuario o contraseña son incorrectos"
       render 'new'
     end
   end
 
   def destroy
+    log_out
+    redirect_to root_path
   end
 end

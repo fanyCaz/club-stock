@@ -4,8 +4,17 @@
         <div class="btn-init new">
             <p>Nuevo</p>
         </div>
-        <div class="btn-init start">
-            <p><%= link_to "Comenzar", signup_path %></p>
+        <% if logged_in? %>
+        <div>
+            <p><%= link_to "Yo", current_user %></p>
         </div>
+        <div>
+            <p><%= link_to "Salir", logout_path, method: :delete %></p>
+        </div>
+        <% else %>
+            <div class="btn-init start">
+                <p><%= link_to "Comenzar", signup_path %></p>
+            </div>
+        <% end %>
     </div>
 </header>

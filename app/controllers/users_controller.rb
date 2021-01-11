@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      reset_session
+      log_in @user
       flash[:success] = "Bienvenido al Inventario"
       redirect_to @user
     else
@@ -26,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   private 
-  def user_params
-    params.require(:user).permit(:name,:username,:password,:password_confirmation)
-  end
+    def user_params
+      params.require(:user).permit(:name,:username,:password,:password_confirmation)
+    end
 end
