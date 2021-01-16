@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   def show
     begin
       @user = User.find(params[:id])
-    rescue => exception
+    rescue
       nil
     end
   end

@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 $back-color: #7eb9da;
+$back-color-light: #a4cee5;
 $back-height: 100%;
 $white : #fff;
 $product-size: 120px;
@@ -14,12 +15,29 @@ $product-left: 10em;
 }
 
 body{
-    background-color: $back-color;
+    background-color: $back-color-light;
+    margin: 0;
+    overflow: hidden;
 }
 
 .home-background{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+footer{
+    background-color: $back-color;
+    position: fixed;
+    width:100%;
+    li{
+        list-style-type: none;
+    }
+}
+
+.header{
+    background-color: $back-color;
+    display: grid;
+    grid-template-columns: 20% 40% 20% 20%;
 }
 
 .images{
@@ -54,11 +72,6 @@ body{
     justify-self: center;
     align-self: center;
     color: $white;
-}
-
-.header{
-    display: grid;
-    grid-template-columns: 20% 40% 20% 20%;
 }
 
 .btn-init{
