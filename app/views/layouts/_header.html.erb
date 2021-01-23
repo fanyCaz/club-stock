@@ -1,20 +1,13 @@
 <header>
-    <div class="header">
-        <%= link_to "Club Stock", root_path, id: "logo" %>
-        <div class="btn-init new">
-            <p>Nuevo</p>
-        </div>
+	<ul class="header">
+        <li><%= link_to "Club Stock", root_path %></li>
+       	<li><%= link_to "About", about_path %></li>
+       	<li><%= link_to "Contact", contact_path %></li>
         <% if logged_in? %>
-        <div>
-            <p><%= link_to "Yo", current_user %></p>
-        </div>
-        <div>
-            <p><%= link_to "Salir", logout_path, method: :delete %></p>
-        </div>
+	        <li><%= link_to "Yo", current_user %></p></li>
+	        <li><%= link_to "Salir", logout_path, method: :delete %></p></li>
         <% else %>
-            <div class="btn-init start">
-                <p><%= link_to "Comenzar", signup_path %></p>
-            </div>
+            <li><%= link_to "Comenzar", signup_path %></li>
         <% end %>
-    </div>
+    </ul>
 </header>

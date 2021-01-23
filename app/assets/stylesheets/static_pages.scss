@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+$font-stack: Helvetica, sans-serif;
+$white : #fff;
+$btn-new-color: #64B883;
 $back-color: #7eb9da;
 $back-color-light: #a4cee5;
 $back-height: 100%;
@@ -18,6 +21,7 @@ body{
     background-color: $back-color-light;
     margin: 0;
     overflow: hidden;
+    font: 100% $font-stack;
 }
 
 .home-background{
@@ -25,19 +29,31 @@ body{
     grid-template-columns: 50% 50%;
 }
 
-footer{
+ul.header{
     background-color: $back-color;
-    position: fixed;
-    width:100%;
+    margin-top: 0;
+    padding: 2em;
     li{
         list-style-type: none;
+        display: inline;
+        padding: 0 5em;
     }
-}
-
-.header{
-    background-color: $back-color;
-    display: grid;
-    grid-template-columns: 20% 40% 20% 20%;
+    a{
+        color: $white;
+        font-weight: bold;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    } 
+    a:active{
+        text-decoration: none;
+    }
 }
 
 .images{
@@ -89,12 +105,4 @@ footer{
     grid-column: 1;
     text-align: center;
     align-self: center;
-}
-
-.new{
-    grid-column: 3;
-}
-
-.start{
-    grid-column: 4;
 }
