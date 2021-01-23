@@ -1,33 +1,36 @@
 <% provide(:title, 'Registro') %>
 
-<h1>Regístrate</h1>
-<p>Sé un usuario para un mejor manejo de tu Inventario</p>
-
-<%= form_with(model: @user, local: true) do |f| %>
-        <% if @user.errors.any? %>
-          <div id="error_explanation">
-            <div class="alert alert-danger">
-              The form contains <%= pluralize(@user.errors.count, "error") %>.
-            </div>
-            <ul>
-            <% @user.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmación" %>
-      <%= f.password_field :password_confirmation %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-<% end %>
+<div class="register-container">
+  <div class="register-name">
+    <h1>Regístrate</h1>
+    <p>Sé un usuario para un mejor manejo de tu Inventario</p>
+  </div>
+  <div class="register-form">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-item">
+        <%= f.text_field :name, class:"form-item-field", placeholder: "Nombre Completo" %>
+      </div>
+      <div class="form-item">
+        <%= f.text_field :username, class:"form-item-field",placeholder: "Correo Electrónico" %>
+      </div>
+      <div class="form-item">
+        <%= f.password_field :password, class:"form-item-field",placeholder: "Contraseña" %>
+      </div>
+      <div class="form-item">
+        <%= f.password_field :password_confirmation, class:"form-item-field",placeholder: "Confirma tu contraseña" %>
+      </div>
+      <div class="form-item">
+        <%= f.submit "Crea tu cuenta", class: "btn-submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

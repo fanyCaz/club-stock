@@ -1,3 +1,48 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'variables';
+
+.register-container{
+	display: grid;
+	grid-template-columns: 50%;
+}
+
+.register-name{
+	padding-left: 2em;
+	h1{
+		color: $white;
+	}
+	grid-column-start: 1;
+}
+
+.register-form{
+	padding: 2em;
+	grid-column-start: 2;
+	background-color: $white;
+	border-radius: 50px 0 0 50px;
+}
+
+.form-item{
+	width: 100%;
+	padding: 1em;
+	.form-item-label{
+		font-size: 1em;
+	}
+	.form-item-field{
+		width: 100%;
+		padding: .5em;
+		background-color: transparent;
+		border: 1px solid;
+		border-color: transparent transparent #939497 transparent;
+	}
+}
+
+.btn-submit{
+	background-color: #119933;
+	color: $white;
+	width: 100%;
+	padding: 1em;
+	border: transparent;
+	border-radius: 50px;
+}
